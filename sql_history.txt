@@ -1,0 +1,17 @@
+SELECT first_name, last_name, email FROM students
+WHERE email LIKE '%.com';
+SELECT * FROM students
+;
+SELECT sql FROM   (SELECT sql sql, type type, tbl_name tbl_name, name name, rowid x     FROM sqlite_master UNION ALL   SELECT sql, type, tbl_name, name, rowid FROM sqlite_temp_master) WHERE type!='meta' AND sql NOTNULL AND name NOT LIKE 'sqlite_%'ORDER BY rowid
+SELECT first_name, last_name, phone, email FROM students
+WHERE phone LIKE '%x%'
+ORDER BY last_name, first_name;
+SELECT sql FROM   (SELECT sql sql, type type, tbl_name tbl_name, name name, rowid x     FROM sqlite_master UNION ALL   SELECT sql, type, tbl_name, name, rowid FROM sqlite_temp_master) WHERE type!='meta' AND sql NOTNULL AND name NOT LIKE 'sqlite_%'ORDER BY rowid
+SELECT gender, COUNT(gender) FROM students
+GROUP BY gender;
+SELECT first_name, last_name, birthday FROM students
+ORDER BY birthday ASC
+LIMIT 10;
+SELECT first_name, last_name, birthday FROM students
+ORDER BY birthday DESC
+LIMIT 10;
